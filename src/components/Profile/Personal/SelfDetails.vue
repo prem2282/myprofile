@@ -4,7 +4,7 @@
         About Me
     </p>
     <q-list class=" bg-purple-1 q-pt-sm">
-        <q-item v-for="item in items" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="item in personal" :key="item.name" class="row q-pa-xs">
             <div class="col-3 bg-purple-10  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
@@ -20,33 +20,12 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      items: [
-        {
-          name: 'Full Name',
-          value: 'PremAnand Sukumaran'
-        },
-        {
-          name: 'Based out of ',
-          value: 'Coimbatore,TN, India'
 
-        },
-        {
-          name: 'Nationality',
-          value: 'Indian'
-        },
-        {
-          name: 'Born in',
-          value: '1982'
-        },
-        {
-          name: 'Native Language',
-          value: 'Tamil'
-        }
-      ]
-    }
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters('profile', ['personal'])
   }
+
 }
 </script>

@@ -4,7 +4,7 @@
         Client Details
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="item in items" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="item in client" :key="item.name" class=" row q-pa-xs">
             <div class="col-3 bg-teal  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
@@ -28,54 +28,12 @@
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      items: [
-        {
-          name: 'UnitedHealth Group',
-          period: '2003 - 2005',
-          role: 'Developer',
-          loc: 'Chennai, India',
-          BU: 'Healthcare'
-        },
-        {
-          name: 'UnitedHealth Group',
-          period: '2006 - 2012',
-          role: 'Lead Developer - Project Manager',
-          loc: 'Hartford, CT, USA',
-          BU: 'Healthcare'
-        },
-        {
-          name: 'UnitedHealth Group',
-          period: '2012 - 2017',
-          role: 'Solution Architect/Project Manager(multiple)',
-          BU: 'Healthcare',
-          loc: 'Coimbatore - India'
-        },
-        {
-          name: 'Emblem Health',
-          period: '2018 - 2019',
-          role: 'Enterprise/Solution Architect',
-          BU: 'Healthcare',
-          loc: 'Coimbatore - India'
-        },
-        {
-          name: 'Abbott Laboratories',
-          period: '2019 - 2020',
-          role: 'Program Manager',
-          BU: 'Life Sciences',
-          loc: 'Coimbatore - India'
-        },
-        {
-          name: 'Sanofi',
-          period: '2019 - 2020',
-          role: 'Techinical Solution Architect (ML/NLP)',
-          BU: 'Life Sciences',
-          loc: 'Coimbatore - India'
-        }
-      ]
-    }
+  computed: {
+    ...mapGetters('profile', ['client'])
   }
+
 }
 </script>

@@ -4,11 +4,11 @@
         Current Employment Details
     </p>
     <q-list class=" bg-yellow-1 q-pt-sm">
-        <q-item v-for="item in items" :key="item.name" class="row q-pa-xs">
-            <div class="col-3 bg-amber-14  q-pa-sm  text-white text-bold text-uppercase">
+        <q-item v-for="item in employment" :key="item.name" class="row q-pa-xs">
+            <div class="col-xs-6 col-sm-3 bg-amber-14  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
-            <div class="col-9 bg-amber-2  q-pa-sm">
+            <div class="col-xs-6 col-sm-9 bg-amber-2  q-pa-sm">
             {{ item.value }}
             </div>
         </q-item>
@@ -19,32 +19,12 @@
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      items: [
-        {
-          name: 'Currently Employed',
-          value: 'Cognizant Technology Solutions'
-        },
-        {
-          name: 'Joined in',
-          value: 'Sep 2003'
-        },
-        {
-          name: 'Designation',
-          value: 'Sr. Architect - Technology'
-        },
-        {
-          name: 'Reports to',
-          value: 'Chief Technology Officer'
-        },
-        {
-          name: 'Business Units',
-          value: 'Healthcare, Life Sciences'
-        }
-      ]
-    }
+  computed: {
+    ...mapGetters('profile', ['employment'])
   }
+
 }
 </script>

@@ -4,7 +4,7 @@
         Certification
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="item in items" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="item in certs" :key="item.name" class="row q-pa-xs">
             <div class="col-4 bg-teal  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
@@ -25,24 +25,12 @@
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      items: [
-        {
-          name: 'AWS Solution Architect Associate',
-          partner: 'AWS',
-          link: 'View Cert',
-          area: 'Cloud Architecture'
-        },
-        {
-          name: 'Data Vitualization',
-          partner: 'HarvardX',
-          link: 'View Cert',
-          area: 'Data Science'
-        }
-      ]
-    }
+  computed: {
+    ...mapGetters('profile', ['certs'])
   }
+
 }
 </script>

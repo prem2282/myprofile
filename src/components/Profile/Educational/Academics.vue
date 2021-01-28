@@ -4,7 +4,7 @@
         Academics
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="item in items" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="item in academics" :key="item.name" class="row q-pa-xs">
             <div class="col-3 bg-teal  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
@@ -31,36 +31,12 @@
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex'
 export default {
-  data () {
-    return {
-      items: [
-        {
-          name: 'Bachlor of Engineering',
-          period: '2003',
-          major: 'Electrical & Electronics Engineering',
-          college: 'Vellore Institute of Technology (VIT)',
-          university: 'Madras University',
-          score: '81%'
-        },
-        {
-          name: 'Higher Secondary (10+2)',
-          period: '1999',
-          major: 'Computer Science Group',
-          college: 'Atomic Energy Higher Secondar School',
-          university: 'Kalpakkam, Tamil Nadu',
-          score: '89%'
-        },
-        {
-          name: 'Secondary',
-          period: '1997',
-          major: 'Tamil Nadu State Board',
-          college: 'Government High School, Pudupattinam',
-          university: 'Kalpakkam, Tamil Nadu',
-          score: '84.5%'
-        }
-      ]
-    }
+  computed: {
+    ...mapGetters('profile', ['academics'])
   }
+
 }
 </script>
