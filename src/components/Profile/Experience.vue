@@ -12,10 +12,10 @@
           mobile-arrows
           narrow-indicator
         >
-          <q-tab icon="person" name="professional" :label=expLabel.l1 />
-          <q-tab icon="book" name="educational" :label=expLabel.l2 />
+          <q-tab icon="fas fa-user-tie" name="professional" :label=expLabel.l1 />
+          <q-tab icon="fas fa-graduation-cap" name="educational" :label=expLabel.l2 />
           <q-tab  icon="engineering" name="technical" :label=expLabel.l3 />
-          <q-tab  icon="remember_me" name="personal" :label=expLabel.l4 />
+          <q-tab  icon="fas fa-address-card" name="personal" :label=expLabel.l4 />
         </q-tabs>
 
         <q-separator />

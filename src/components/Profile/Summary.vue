@@ -5,7 +5,7 @@
         :src="summary.url"
         spinner-color="white"
       />
-      <q-img class="shadow-1 rounded-borders"
+      <!-- <q-img class="shadow-1 rounded-borders"
         src='../../assets/aws-certified-logo_color-horz_270x45.jpg'
         spinner-color="white"
         style="max-width: 150px"
@@ -14,7 +14,7 @@
         src='../../assets/solutions-architect-associate-tag_270x24.jpg'
         spinner-color="white"
         style="max-width: 150px"
-      />
+      /> -->
     </div>
     <div class="col-9 ">
         <p class='text-subtitle1'>
@@ -31,6 +31,13 @@
             <q-chip class="shadow-5" text-color="white"  color="teal" icon="phone">{{ summary.phone }}</q-chip>
             <q-chip class="shadow-5" text-color="white"  color="primary" icon="email">{{ summary.email }}</q-chip>
             <q-chip class="shadow-5" text-color="white"  color="deep-orange"  icon="house"> {{ summary.loc }} </q-chip>
+            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-facebook-f"  @click.native="onClick(fblink)"/>
+            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-linkedin-in"  @click.native="onClick(linkedin)"/>
+            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-github"  @click.native="onClick(github)"/>
+
+        </div>
+        <div>
+
         </div>
 
     </div>
@@ -40,9 +47,22 @@
 <script>
 
 import { mapGetters } from 'vuex'
+import { openURL } from 'quasar'
 export default {
+  data () {
+    return {
+      fblink: 'https://www.facebook.com/prem.anand.752',
+      linkedin: 'https://www.linkedin.com/in/prem2282/',
+      github: 'https://github.com/prem2282'
+    }
+  },
   computed: {
     ...mapGetters('profile', ['summary'])
+  },
+  methods: {
+    onClick: function (link) {
+      openURL(link)
+    }
   },
   mounted () {
     console.log('mounted')
