@@ -40,7 +40,7 @@ export default function () {
       {
         name: 'UnitedHealth Group',
         period: '2012 - 2017',
-        role: 'Solution Architect/Project Manager(multiple)',
+        role: 'Solution Architect/Project Manager',
         BU: 'Healthcare',
         loc: 'Coimbatore - India'
       },
@@ -60,8 +60,8 @@ export default function () {
       },
       {
         name: 'Sanofi',
-        period: '2019 - 2020',
-        role: 'Techinical Solution Architect (ML/NLP)',
+        period: '2020 - 2021',
+        role: 'ML/NLP Solution Architect',
         BU: 'Life Sciences',
         loc: 'Coimbatore - India'
       }
@@ -149,103 +149,102 @@ export default function () {
         area: 'Data Science'
       }
     ],
-    languages: [
-      {
+    languages: {
+      ID1: {
         name: ['COBOL', 'JCL', 'CICS', 'REXX'],
         period: '2003 - 2012',
         role: 'Expert',
         type: 'Mainframe Programming'
       },
-      {
+      ID2: {
         name: ['IMS DB/DC', 'DB2', 'VSAM'],
         period: '2003 - 2012',
         role: 'Expert',
         type: 'Mainframe Datastore/Filesystem'
       },
-      {
+      ID3: {
         name: ['z/OS', 'RACF', 'Endevor', 'Xpeditor', 'FileAid'],
         period: '2003 - 2012',
         role: 'Expert',
         type: 'Mainframe Env & tools'
       },
-      {
+      ID4: {
         name: ['Python', 'Flask', 'Djongo'],
         period: '2015 to till date',
         role: 'Expert',
         type: 'Backend'
       },
-      {
+      ID5: {
         name: ['Pandas', 'Numpy', 'Matplotlib', 'Tenserflow Keras', 'Scikit learn', 'Spacy', 'NLTK', 'expert.ai', 'Tika', 'PDFPlumber', 'Tesseract', 'scispacy', 'Bert', 'pyTest'],
         period: '2018 to till date',
         role: 'Practioner',
         type: 'Key Python Packages'
       },
-      {
+      ID6: {
         name: ['Javascript', 'ReactJs', 'ReactNative', 'VueJs', 'HTML', 'CSS', 'SASS'],
         period: '2015 to till date',
         role: 'Expert',
         type: 'Frontend'
       },
-      {
+      ID7: {
         name: ['ReactNative', 'PhoneGap', 'Ionic', 'Native Scripts'],
         period: '2018 to till date',
         role: 'Explorer',
         type: 'Mobile Platform'
       },
-      {
+      ID8: {
         name: ['SQL Server', 'MySQL', 'MongoDB', 'PostgreSQL', 'DynamoDB', 'Amazon RDS', 'Amazon Arora DB', 'DocumentDB', 'SQlite', 'MS Access'],
         period: '2015 to till date',
         role: 'Practitioner',
         type: 'Databases'
       },
-      {
+      ID9: {
         name: ['REST', 'SOAP', 'Djongo Rest Framework', 'AWS API Gateway', 'GraphQL'],
         period: '2015 to till date',
         role: 'Practitioner',
         type: 'API'
       },
-      {
+      ID10: {
         name: ['PostMan', 'SoapUI', 'GraphiQl'],
         period: '2015 to till date',
         role: 'Practitioner',
         type: 'API testing tools'
       },
-      {
+      ID11: {
         name: ['Mulesoft', 'Informatica', 'Talend', 'Marklogic'],
         period: '2015 to till date',
         role: 'Explorer',
         type: 'Data Integration'
       },
-      {
+      ID12: {
         name: ['IAM', 'Conginito', 'EC2', 'S3', 'SQS', 'Lambda', 'Route53', 'Lightsail', 'API Gateway', 'CloudWatch', 'CloudTrail', 'Comprehend', 'EFS'],
         period: '2015 to till date',
         role: 'Practitioner',
         type: 'AWS Services'
       }
-    ],
-    personal: [
-      {
+    },
+    personal: {
+      ID1: {
         name: 'Full Name',
         value: 'PremAnand Sukumaran'
       },
-      {
+      ID2: {
         name: 'Based out of ',
         value: 'Coimbatore,TN, India'
-
       },
-      {
+      ID3: {
         name: 'Nationality',
         value: 'Indian'
       },
-      {
+      ID4: {
         name: 'Born in',
         value: '1982'
       },
-      {
+      ID5: {
         name: 'Native Language',
         value: 'Tamil'
       }
-    ],
+    },
     summary: {
       url: 'https://media-exp1.licdn.com/dms/image/C5603AQEo1Z0ms8QHmQ/profile-displayphoto-shrink_400_400/0/1610038046775?e=1616025600&v=beta&t=BJOW99Q242GubLguTKKl813VzCFTINtr4xStOtN50aU',
       summary_text: 'I am PremAnand, a senior Enterprise/Technology Solutions Architect cum Program Manager in a leading IT organization.',

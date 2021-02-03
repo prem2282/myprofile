@@ -4,7 +4,7 @@
         Academics
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="item in academics" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="(item,key) in academics" :key="key" class="row q-pa-xs">
             <div class="col-3 bg-teal  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>

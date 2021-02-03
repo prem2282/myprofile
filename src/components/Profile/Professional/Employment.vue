@@ -3,7 +3,7 @@
     <p class=" text-brown  text-h6 q-pl-sm q-pt-sm">
         Current Employment Details
     </p>
-    <q-list class=" bg-yellow-1 q-pt-sm">
+    <q-list  class=" bg-yellow-1 q-pt-sm">
         <q-item v-for="item in employment" :key="item.name" class="row q-pa-xs">
             <div class="col-xs-6 col-sm-3 bg-amber-14  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
@@ -25,6 +25,5 @@ export default {
   computed: {
     ...mapGetters('profile', ['employment'])
   }
-
 }
 </script>

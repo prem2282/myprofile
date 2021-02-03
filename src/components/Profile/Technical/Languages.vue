@@ -4,7 +4,7 @@
         Programming Skills
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="item in languages" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="(item, key) in languages" :key="key" class="row q-pa-xs">
             <div class="col-3 bg-brown  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.type }}
             </div>

@@ -4,7 +4,7 @@
         About Me
     </p>
     <q-list class=" bg-purple-1 q-pt-sm">
-        <q-item v-for="item in personal" :key="item.name" class="row q-pa-xs">
+        <q-item v-for="(item,key) in personal" :key="key" class="row q-pa-xs">
             <div class="col-3 bg-purple-10  q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
