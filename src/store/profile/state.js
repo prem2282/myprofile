@@ -253,6 +253,13 @@ export default function () {
       phone: '822 082 9666',
       email: 'prem2282@gmail.com',
       loc: 'Coimbatore, TN, India'
+    },
+    boxType: 'row',
+    expLabel: {
+      l1: 'professional',
+      l2: 'educational',
+      l3: 'technical',
+      l4: 'personal'
     }
 
   }

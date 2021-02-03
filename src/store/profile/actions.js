@@ -27,3 +27,9 @@
 //   commit('updateOne', data.data)
 //   console.log(data)
 // }
+
+export function updateBoxType ({ commit }, payload) {
+  console.log('payload in updateBoxType', payload.width)
+  commit('updateBoxType', payload.width)
+//   console.log(data)
+}

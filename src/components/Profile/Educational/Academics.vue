@@ -4,8 +4,8 @@
         Academics
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="(item,key) in academics" :key="key" class="row q-pa-xs">
-            <div class="col-3 bg-teal  q-pa-sm  text-white text-bold text-uppercase">
+        <q-item v-for="(item,key) in academics" :key="key" class="q-pa-xs" :class="boxType">
+            <div class="col-3 bg-teal  text-center q-pa-sm  text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
             <div class="col-1 bg-teal-1 text-center  q-pa-sm">
@@ -14,7 +14,7 @@
             <div class="col-2 bg-teal-2 text-center q-pa-sm">
             {{ item.major }}
             </div>
-            <div class="col-3 bg-teal-1  q-pa-sm">
+            <div class="col-3 bg-teal-1  text-center q-pa-sm">
             {{ item.college }}
             </div>
             <div class="col-2 bg-teal-3 text-center q-pa-sm">
@@ -35,7 +35,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters('profile', ['academics'])
+    ...mapGetters('profile', ['academics', 'boxType'])
   }
 
 }

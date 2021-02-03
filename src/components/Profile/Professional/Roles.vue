@@ -4,14 +4,16 @@
         Roles
     </p>
     <q-list class=" bg-purple-1 q-pt-sm">
-        <q-item v-for="(item,key) in roles" :key="key" class="row q-pa-xs">
+        <q-item v-for="(item,key) in roles" :key="key" class="row q-pa-xs"
+        :class="report.width>600? 'row': 'column'"
+        >
             <div class="col-3 bg-purple-10  q-pa-sm  text-white text-h5 text-bold text-uppercase">
             {{ item.name }}
             </div>
             <div class="col-9 bg-purple-2  q-pa-sm">
             {{ item.value }}
             <q-separator/>
-            <q-badge class="text-white q-ma-xs q-pa-xs" v-for="badge in item.badge" :key="badge" align="middle">
+            <q-badge class="text-white q-ma-xs q-pa-xs justify-center" v-for="badge in item.badge" :key="badge" align="middle">
               {{badge }}
             </q-badge>
             </div>
@@ -27,6 +29,17 @@
 
 import { mapGetters } from 'vuex'
 export default {
+  data () {
+    return {
+      report: ''
+    }
+  },
+  methods: {
+    onResize (size) {
+      console.log('resized')
+      this.report = size
+    }
+  },
   computed: {
     ...mapGetters('profile', ['roles'])
   }

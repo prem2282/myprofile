@@ -28,3 +28,11 @@ export function personal (state) {
 export function summary (state) {
   return state.summary
 }
+
+export function boxType (state) {
+  return state.boxType
+}
+
+export function expLabel (state) {
+  return state.expLabel
+}

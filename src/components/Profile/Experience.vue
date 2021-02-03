@@ -9,12 +9,13 @@
           active-color="primary"
           indicator-color="primary"
           align="justify"
+          mobile-arrows
           narrow-indicator
         >
-          <q-tab name="professional" label="Professional" />
-          <q-tab name="educational" label="Educational" />
-          <q-tab name="technical" label="Technical" />
-          <q-tab name="personal" label="Personal" />
+          <q-tab icon="person" name="professional" :label=expLabel.l1 />
+          <q-tab icon="book" name="educational" :label=expLabel.l2 />
+          <q-tab  icon="engineering" name="technical" :label=expLabel.l3 />
+          <q-tab  icon="remember_me" name="personal" :label=expLabel.l4 />
         </q-tabs>
 
         <q-separator />
@@ -44,7 +45,12 @@
         </q-tab-panels>
 
       </q-card>
-
+      <q-resize-observer @resize="updateBoxType" />
+      <!-- <div class="q-gutter-sm">
+        Reported:
+        <q-badge>width: {{ report.width }}</q-badge>
+        <q-badge>height: {{ report.height }}</q-badge>
+      </div> -->
     </div>
   </div>
 </template>
@@ -59,13 +65,19 @@ import Academics from './Educational/Academics.vue'
 
 import SelfDetails from './Personal/SelfDetails.vue'
 import Certification from './Educational/Certification.vue'
-
+import { mapGetters, mapActions } from 'vuex'
 export default {
 
   data () {
     return {
       tab: 'professional'
     }
+  },
+  computed: {
+    ...mapGetters('profile', ['expLabel'])
+  },
+  methods: {
+    ...mapActions('profile', ['updateBoxType'])
   },
   components: {
     Employment: Employment,
@@ -75,7 +87,6 @@ export default {
     Certification: Certification,
     SelfDetails: SelfDetails,
     Languages: Languages
-
   }
 }
 </script>

@@ -4,8 +4,8 @@
         Certification
     </p>
     <q-list class=" bg-grey-1 q-pt-sm">
-        <q-item v-for="(item,key) in certs" :key="key" class="row q-pa-xs">
-            <div class="col-4 bg-teal  q-pa-sm  text-white text-bold text-uppercase">
+        <q-item v-for="(item,key) in certs" :key="key" class="row q-pa-xs" :class="boxType">
+            <div class="col-4 bg-teal  q-pa-sm  text-center text-white text-bold text-uppercase">
             {{ item.name }}
             </div>
             <div class="col-2 bg-teal-1 text-center  q-pa-sm">
@@ -14,7 +14,7 @@
             <div class="col-3 bg-teal-2 text-center q-pa-sm">
             {{ item.link }}
             </div>
-            <div class="col-3 bg-teal-1  q-pa-sm">
+            <div class="col-3 bg-teal-1 text-center q-pa-sm">
             {{ item.area }}
             </div>
         </q-item>
@@ -29,7 +29,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters('profile', ['certs'])
+    ...mapGetters('profile', ['certs', 'boxType'])
   }
 
 }
