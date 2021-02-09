@@ -36,3 +36,7 @@ export function boxType (state) {
 export function expLabel (state) {
   return state.expLabel
 }
+
+export function links (state) {
+  return state.links
+}

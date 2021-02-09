@@ -260,6 +260,11 @@ export default function () {
       l2: 'educational',
       l3: 'technical',
       l4: 'personal'
+    },
+    links: {
+      fblink: 'https://www.facebook.com/prem.anand.752',
+      linkedin: 'https://www.linkedin.com/in/prem2282/',
+      github: 'https://github.com/prem2282'
     }
 
   }

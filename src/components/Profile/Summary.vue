@@ -31,9 +31,9 @@
             <q-chip class="shadow-5" text-color="white"  color="teal" icon="phone">{{ summary.phone }}</q-chip>
             <q-chip class="shadow-5" text-color="white"  color="primary" icon="email">{{ summary.email }}</q-chip>
             <q-chip class="shadow-5" text-color="white"  color="deep-orange"  icon="house"> {{ summary.loc }} </q-chip>
-            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-facebook-f"  @click.native="onClick(fblink)"/>
-            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-linkedin-in"  @click.native="onClick(linkedin)"/>
-            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-github"  @click.native="onClick(github)"/>
+            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-facebook-f"  @click.native="onClick(links.fblink)"/>
+            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-linkedin-in"  @click.native="onClick(links.linkedin)"/>
+            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-github"  @click.native="onClick(links.github)"/>
 
         </div>
         <div>
@@ -49,15 +49,9 @@
 import { mapGetters } from 'vuex'
 import { openURL } from 'quasar'
 export default {
-  data () {
-    return {
-      fblink: 'https://www.facebook.com/prem.anand.752',
-      linkedin: 'https://www.linkedin.com/in/prem2282/',
-      github: 'https://github.com/prem2282'
-    }
-  },
+
   computed: {
-    ...mapGetters('profile', ['summary'])
+    ...mapGetters('profile', ['summary', 'links'])
   },
   methods: {
     onClick: function (link) {
@@ -66,6 +60,14 @@ export default {
   },
   mounted () {
     console.log('mounted')
+    console.log("Cookies: " + navigator.cookieEnabled);
+    console.log("Browser Language: " + navigator.browserLanguage);
+    console.log("Language: " + navigator.language);
+    console.log("Platform: " + navigator.platform);
+    console.log("Connection Speed: " + navigator.connectionSpeed);
+    console.log("User Agent: " + navigator.userAgent);
+    console.log("Webdriver: " + navigator.webdriver);
+    console.log("Geolocation: " + navigator.geolocation);
     // this.updateOne()
   }
 
