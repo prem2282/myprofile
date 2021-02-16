@@ -17,7 +17,7 @@
       /> -->
     </div>
     <div class="col-9 ">
-        <p class='text-subtitle1'>
+        <p class="text-subtitle2">
             {{summary.summary_text}}
         </p>
         <p>
@@ -28,18 +28,21 @@
             {{text_3}}
         </p> -->
         <div>
-            <q-chip class="shadow-5" text-color="white"  color="teal" icon="phone">{{ summary.phone }}</q-chip>
-            <q-chip class="shadow-5" text-color="white"  color="primary" icon="email">{{ summary.email }}</q-chip>
-            <q-chip class="shadow-5" text-color="white"  color="deep-orange"  icon="house"> {{ summary.loc }} </q-chip>
-            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-facebook-f"  @click.native="onClick(links.fblink)"/>
-            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-linkedin-in"  @click.native="onClick(links.linkedin)"/>
-            <q-btn class="glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-github"  @click.native="onClick(links.github)"/>
+            <q-chip class="glossy shadow-5" text-color="white"  color="teal" icon="phone">{{ summary.phone }}</q-chip>
+            <q-chip class="glossy shadow-5" text-color="white"  color="primary" icon="email">
+              <a class="emaillink" :href="summary.mailto">{{ summary.email }}</a>
+              </q-chip>
+            <q-chip class="glossy shadow-5" text-color="white"  color="deep-orange"  icon="house"> {{ summary.loc }} </q-chip>
+            <q-btn class="social glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-facebook-f"  @click.native="onClick(links.fblink)"/>
+            <q-btn class="social glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-linkedin-in"  @click.native="onClick(links.linkedin)"/>
+            <q-btn class="social glossy float-right q-mr-sm" size="sm" round  color="deep-orange" icon="fab fa-github"  @click.native="onClick(links.github)"/>
 
         </div>
         <div>
 
         </div>
 
+    <div class="rain">'</div>
     </div>
   </div>
 </template>
@@ -56,18 +59,14 @@ export default {
   methods: {
     onClick: function (link) {
       openURL(link)
+    },
+    success: function (pos) {
     }
   },
   mounted () {
-    console.log('mounted')
-    console.log("Cookies: " + navigator.cookieEnabled);
-    console.log("Browser Language: " + navigator.browserLanguage);
-    console.log("Language: " + navigator.language);
-    console.log("Platform: " + navigator.platform);
-    console.log("Connection Speed: " + navigator.connectionSpeed);
-    console.log("User Agent: " + navigator.userAgent);
-    console.log("Webdriver: " + navigator.webdriver);
-    console.log("Geolocation: " + navigator.geolocation);
+    // navigator.geolocation.getCurrentPosition(this.success)
+
+    // console.log('Geolocation: ' + navigator.geolocation.getCurrentPosition(this.success))
     // this.updateOne()
   }
 
@@ -75,9 +74,106 @@ export default {
 </script>
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Ballet&family=Long+Cang&display=swap');
+
+.rain {
+  /* padding: 0;
+  margin: 0; */
+  text-align: center;
+  animation: rainani 1s ease-in-out 0s infinite alternate;
+  color: aliceblue;
+}
+
+@keyframes rainani {
+  0% {
+    left: 0px;
+    top: 0px;
+    font-size: 100%;
+  }
+  100% {
+    left: 0px;
+    top: 100px;
+    font-size: 200%;
+  }
+}
+.text-subtitle2 {
+  font-size: 150%;
+  /* font-family: 'Long Cang', cursive; */
+  letter-spacing: .1em;
+  text-shadow: .1em .2em .5em gray ;;
+  animation: textappear 2s linear 1s 1;
+}
+
+@keyframes textappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+}
+.emaillink {
+  color: white;
+  text-decoration: none;
+}
+
 .profile-pic {
    height : 140px;
    max-width: 150px;
-   /* border-radius: 1em; */
+   border-radius: 0em 0em 3em 3em;
+   box-shadow:  0em 0em 1em .5em white,
+               .5em .5em 1em .1em rebeccapurple
+   ;
+   border-top: solid 1em sienna;
+   border-right: solid .5em rebeccapurple;
+
+   transition: all .5s linear;
+   /* animation: mymove 2s ease-in-out 1s infinite alternate  ; */
 }
+
+.profile-pic:hover {
+  transform: scale(.9);
+  border-top: solid 1em gainsboro;
+  border-right: solid .5em rebeccapurple;
+  /* transform: rotateZ(10deg);
+  transform: rotateY(20deg); */
+}
+
+.social {
+transition: all .5s linear;
+opacity: .8;
+
+}
+
+.social:hover {
+transform: translateY(-5px);
+box-shadow: 0em 1em 1em grey;
+opacity: 1;
+}
+
+@keyframes mymove {
+  0% {left: -10px;
+        top: 0px;
+   box-shadow:  0em 0em 1em .5em white,
+               -.5em .5em 1em .1em rebeccapurple;
+   opacity: 100%;
+
+  }
+  50% {
+    top:10px;
+   box-shadow:  0em 0em 1em .5em white,
+                0em 0em 1em .1em rebeccapurple;
+   opacity: 90%;
+
+  }
+  100% {left: 10vw;
+      top:0px}
+   box-shadow:  0em 0em 1em .5em white,
+               .5em .5em 1em .1em rebeccapurple;
+   opacity: 100%;
+
+}
+
 </style>

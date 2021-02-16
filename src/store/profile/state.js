@@ -252,6 +252,7 @@ export default function () {
       text_3: 'Knowledge is the only thing that grows the more we share.',
       phone: '822 082 9666',
       email: 'prem2282@gmail.com',
+      mailto: 'mailto:prem2282@gmail.com',
       loc: 'Coimbatore, TN, India'
     },
     boxType: 'row',
