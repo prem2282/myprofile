@@ -81,7 +81,7 @@ export default {
   /* padding: 0;
   margin: 0; */
   text-align: center;
-  animation: rainani 1s ease-in-out 0s infinite alternate;
+  /* animation: rainani 1s ease-in-out 0s infinite alternate; */
   color: aliceblue;
 }
 
