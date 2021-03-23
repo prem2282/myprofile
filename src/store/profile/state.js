@@ -246,7 +246,7 @@ export default function () {
       }
     },
     summary: {
-      url: 'https://media-exp1.licdn.com/dms/image/C5603AQEo1Z0ms8QHmQ/profile-displayphoto-shrink_400_400/0/1610038046775?e=1616025600&v=beta&t=BJOW99Q242GubLguTKKl813VzCFTINtr4xStOtN50aU',
+      url: '/PremProfilePic.jpeg',
       summary_text: 'I am PremAnand, a senior Enterprise/Technology Solutions Architect cum Program Manager in a leading IT organization.',
       text_2: 'Learning is my passion! Sharing what I learn is my duty!',
       text_3: 'Knowledge is the only thing that grows the more we share.',
