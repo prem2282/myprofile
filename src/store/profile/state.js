@@ -3,25 +3,47 @@ export default function () {
     employment: [
       {
         name: 'Currently Employed',
-        value: 'Cognizant Technology Solutions'
+        value: 'EC Group Datasoft'
       },
       {
         name: 'Joined in',
-        value: 'Sep 2003'
+        value: 'Apr 2021'
+      },
+      {
+        name: 'Designation',
+        value: 'Sr.Solutions Architect'
+      },
+      {
+        name: 'Reports to',
+        value: 'Chief Executive Officer'
+      },
+      {
+        name: 'Client - Metaphor.com',
+        value: 'Product Development'
+      }
+    ],
+    prev_employment: [
+      {
+        name: 'Previous Employed',
+        value: 'Cognizant Technology Solutions'
+      },
+      {
+        name: 'Employed between',
+        value: 'Sep 2003 to Mar 2021'
       },
       {
         name: 'Designation',
         value: 'Sr. Architect - Technology'
       },
       {
-        name: 'Reports to',
+        name: 'Reported to',
         value: 'Chief Technology Officer'
       },
       {
         name: 'Business Units',
         value: 'Healthcare, Life Sciences'
       }
-    ],
+    ],    
     client: [
       {
         name: 'UnitedHealth Group',

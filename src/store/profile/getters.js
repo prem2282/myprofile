@@ -2,6 +2,10 @@ export function employment (state) {
   return state.employment
 }
 
+export function prev_employment (state) {
+  return state.prev_employment
+}
+
 export function client (state) {
   return state.client
 }
